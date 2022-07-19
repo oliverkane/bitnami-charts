@@ -172,6 +172,7 @@ The command removes all the Kubernetes components associated with the chart and 
 | `appFromExternalRepo.clone.repository`          | Git repository to clone                                                | `https://github.com/dotnet/AspNetCore.Docs.git`                     |
 | `appFromExternalRepo.clone.revision`            | Git revision to checkout                                               | `main`                                                              |
 | `appFromExternalRepo.clone.extraVolumeMounts`   | Add extra volume mounts for the GIT container                          | `[]`                                                                |
+| `appFromExternalRepo.publish.extraVolumeMounts`   | Add extra volume mounts for the GIT container                          | `[]`                                                                |
 | `appFromExternalRepo.publish.image.registry`    | .NET SDK image registry                                                | `docker.io`                                                         |
 | `appFromExternalRepo.publish.image.repository`  | .NET SDK image repository                                              | `bitnami/dotnet-sdk`                                                |
 | `appFromExternalRepo.publish.image.tag`         | .NET SDK image tag (immutable tags are recommended)                    | `6.0.300-debian-10-r9`                                              |

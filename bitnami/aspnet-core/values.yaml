@@ -427,6 +427,14 @@ appFromExternalRepo:
     ## @param appFromExternalRepo.publish.subFolder Sub folder under the Git repository containing the ASP.NET Core app
     ##
     subFolder: aspnetcore/fundamentals/servers/kestrel/samples/6.x/KestrelSample
+    ## @param appFromExternalRepo.publish.extraVolumeMounts Add extra volume mounts for the dotnet publish container
+    ## Useful to mount nuget secrets (normally used with extraVolumes)
+    ## e.g:
+    ## extraVolumeMounts:
+    ##   - name: nuget-config-dir
+    ##     mountPath: /root/.nuget/
+    ##
+    extraVolumeMounts: []
     ## @param appFromExternalRepo.publish.extraFlags Extra flags to be appended to "dotnet publish" command
     ##
     extraFlags: []

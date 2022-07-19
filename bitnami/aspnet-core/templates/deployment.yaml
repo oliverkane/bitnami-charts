@@ -97,6 +97,9 @@ spec:
               mountPath: /app
             - name: repo
               mountPath: /repo
+          {{- if .Values.appFromExternalRepo.publish.extraVolumeMounts }}
+            {{- include "common.tplvalues.render" (dict "value" .Values.appFromExternalRepo.publish.extraVolumeMounts "context" $) | nindent 12 }}
+          {{- end }}
         {{- end }}
         {{- if .Values.initContainers }}
         {{- include "common.tplvalues.render" (dict "value" .Values.initContainers "context" $) | nindent 8 }}
